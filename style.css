@@ -53,14 +53,16 @@ nav ul li a:hover{
     align-items: center;
     margin: 100px 0;
 }
-.followRow{
+.followRow a{
     display: flex; 
     align-items: center;
+    text-decoration: none;
 }
 .col-1{
     flex-basis: 40%;
     position: relative;
     margin-left: 50px;
+    margin-right: 5%;
 }
 .col-1 h2{
     font-size: 54px;
@@ -146,6 +148,11 @@ button:hover {
 .social-links {
     text-align: center;
 }
+.follow img{
+    height: 30px;
+    margin: 5px;
+    cursor: pointer;
+}
 .footer{
     position: static;
     background-color: #dc062d;
@@ -206,7 +213,7 @@ svg text {
         margin-top: 15px;
     }
     .container{
-        background: linear-gradient(#707070, #161515);
+        background: linear-gradient(#aeacac, #161515);
     }
     .row{
         flex-direction: column-reverse;

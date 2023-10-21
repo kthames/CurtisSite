@@ -46,6 +46,7 @@ const aboutLink = document.querySelector("#aboutLink");
 
 const columnOne = document.querySelector(".col-1");
 const footer = document.querySelector(".footer");
+const imageShow = document.querySelector("#showImage");
 footer.innerHTML = "";
 
 listenLink.onclick = function (e) {
@@ -66,7 +67,6 @@ aboutLink.onclick = function (e) {
     showRow("about");
 }
 
-
 function showRow(part) {
     if(part === "about") {
         columnOne.innerHTML = `<div class="about">
@@ -79,31 +79,42 @@ function showRow(part) {
         <a href="https://www.instagram.com/curtisiii/" target="_blank"><img src = "images/ig.png"></a>
         <a href="https://twitter.com/curtisiiix" target="_blank"><img src = "images/tw.png"></a>
     </div>`
+    imageShow.src = "images/curtis1.JPG";
 
     } else if(part === "listen"){
         columnOne.innerHTML = `<div class="listen">
         <div class="followRow">
-            <img src="images/applemusic.png">
-            <h2>APPLE MUSIC</h2>
+            <a href="https://music.apple.com/us/album/soulnoid/1708600099" target="_blank">
+                <img src="images/applemusic.png">
+                <h2>APPLE MUSIC</h2>
+            </a>   
         </div>
         <div class="followRow">
-            <img src="images/spotify.png">
-            <h2>SPOTIFY</h2>       
+            <a href="https://open.spotify.com/album/3e7eTlZDUoi6xxwt2NwAJq?go=1&sp_cid=13ffc5ff61d6ce5b480956eb9e50ca63&utm_source=embed_player_p&utm_medium=desktop&nd=1" target="_blank">
+                <img src="images/spotify.png">
+                <h2>SPOTIFY</h2>
+            </a>        
         </div>
-    </div> `;
+        </div>`;
     footer.innerHTML = "";
+    imageShow.src = "images/S0ULN0ID.JPG";
     } else if(part === "follow"){
         columnOne.innerHTML = `<div class="follow">
         <div class="followRow">
-            <img src="images/tw.png">
-            <h2>TWITTER</h2>
+            <a href="https://www.instagram.com/curtisiii/" target="_blank">
+                <img src="images/ig.png">
+                <h2>INSTAGRAM</h2>
+            </a>
         </div>
         <div class="followRow">
-            <img src="images/ig.png">
-            <h2>INSTAGRAM</h2>       
+            <a href="https://twitter.com/curtisiiix" target="_blank">
+                <img src="images/tw.png">
+                <h2>TWITTER</h2>
+            </a>      
         </div>
     </div>`;
     footer.innerHTML = "";
+    imageShow.src = "images/curtis2.JPG";
     } else {
         console.log("not working");
     }
