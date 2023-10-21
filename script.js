@@ -114,7 +114,7 @@ function showRow(part) {
         </div>
     </div>`;
     footer.innerHTML = "";
-    imageShow.src = "images/curtis2.JPG";
+    imageShow.src = "images/curtis3.JPG";
     } else {
         console.log("not working");
     }
