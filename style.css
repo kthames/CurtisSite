@@ -11,6 +11,7 @@
     padding-right: 8%;
     box-sizing: border-box;
     overflow: hidden;
+    z-index: -1;
 }
 .navbar {
     width: 100%;
@@ -18,12 +19,13 @@
     align-items: center;
 }
 .logo {
-    width: 50px; 
+    width: 150px; 
     cursor: pointer; 
     margin: 30px 0;
+
 }
 .menu-icon {
-    width: 25px;
+    width: 50px;
     cursor: pointer;
     display: none;
 }
@@ -35,20 +37,25 @@ nav ul li {
     list-style: none;
     display: inline-block;
     margin-right: 30px;
+    color: black;
 }
 nav ul li a{
     text-decoration: none;
     color: #620707; 
-    font-size: 14px;
+    font-size: 24px;
 }
 nav ul li a:hover{
-    color: #ff5ea2;
+    color: #bf0e0e;
 }
 .row {
     display: flex; 
     justify-content: space-between;
     align-items: center;
     margin: 100px 0;
+}
+.followRow{
+    display: flex; 
+    align-items: center;
 }
 .col-1{
     flex-basis: 40%;
@@ -57,16 +64,16 @@ nav ul li a:hover{
 }
 .col-1 h2{
     font-size: 54px;
-    color: #707070;
+    color: black;
 }
 .col-1 h3{
     font-size: 30px;
-    color: #707070;
+    color: black;
     font-weight: 100;
     margin: 20px 0 10px;
 }
 .col-1 p{
-    font-size: 16px;
+    font-size: 14px;
     color: #b7b7b7; 
     font-weight: 100;
 }
@@ -102,7 +109,7 @@ button:hover {
 .col-1::after{
     content: '';
     width: 10px; 
-    height: 57%; 
+    height: 100%; 
     background: linear-gradient(#620707, #dc062d);
     position: absolute;
     left: -40px;
@@ -116,6 +123,7 @@ button:hover {
 }
 .col-2 .controller{
     width: 90%;
+    z-index: 1;
     /* position: absolute;
     bottom: 0px;  */
 }
@@ -127,17 +135,46 @@ button:hover {
     border-radius: 20px 0 0 20px;
     height: 100%;
     width: 100%;
-    z-index: -1;
+    z-index: 0;
     transform: translate(150px);
 }
 .social-links img{
-    height: 13px;
+    height: 30px;
     margin: 20px;
     cursor: pointer;
 }
 .social-links {
     text-align: center;
 }
+.footer{
+    position: static;
+    background-color: #dc062d;
+}
+
+svg {
+	font-family: "Anton", sans-serif;
+	width: 100%; 
+    height: 100%;
+}
+svg text {
+	animation: stroke 5s infinite alternate;
+	stroke-width: 2;
+	stroke: #DC062D;
+	font-size: 80px;
+}
+@keyframes stroke {
+	0%   {
+		fill: rgba(220,6,45,0); stroke: rgba(220,6,45,1);
+		stroke-dashoffset: 25%; stroke-dasharray: 0 50%; stroke-width: 2;
+	}
+	70%  {fill: rgba(220,6,45,0); stroke: rgba(220,6,45,1); }
+	80%  {fill: rgba(220,6,45,0); stroke: rgba(220,6,45,1); stroke-width: 3; }
+	100% {
+		fill: rgba(220,6,45,1); stroke: rgba(220,6,45,0);
+		stroke-dashoffset: -25%; stroke-dasharray: 50% 0; stroke-width: 0;
+	}
+}
+
 
 @media only screen and (max-width: 700px) {
     nav ul{
@@ -154,7 +191,11 @@ button:hover {
         margin-bottom: 10px;
     }
     nav ul li a {
-        color: black;
+        color: white;
+        font-size: 18px;
+    }
+    .logo {
+        width: 120px; 
     }
     .menu-icon{
         display: block;
@@ -162,6 +203,10 @@ button:hover {
     #menuList{
         overflow: hidden;
         transition: 0.5s;
+        margin-top: 15px;
+    }
+    .container{
+        background: linear-gradient(#707070, #161515);
     }
     .row{
         flex-direction: column-reverse;
@@ -179,11 +224,21 @@ button:hover {
     }
     .col-1{
         flex-basis: 100%;
+        width: 70%
     }
     .col-1 h2{
         font-size: 35px;
+        margin-left: 5px;
     }
     .col-1 h3{
         font-size: 15px;
+    }
+    .follow img{
+        height: 30px;
+        margin: 5px;
+        cursor: pointer;
+    }
+    svg text {
+        font-size: 60px;
     }
 }
